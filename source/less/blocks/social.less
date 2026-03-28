@@ -1,0 +1,30 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  list-style: none;
+}
+
+.social__item {
+  background-color: @blue;
+  padding: 10px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  .flex-center();
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-down;
+  }
+}
+
+.social__icon {
+  display: block;
+}

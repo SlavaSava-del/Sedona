@@ -1,0 +1,138 @@
+.gallery__list {
+  .list-reset();
+  margin: 40px auto 0 auto;
+  display: grid;
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    width: 87vw;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.gallery__item {
+  padding: 25px;
+  position: relative;
+
+  @media (max-width: 767px) {
+    border-top: 1px solid @gray;
+    border-bottom: 1px solid @gray;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.gallery__item:first-child {
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1 / span 2;
+    & .gallery__image {
+      height: auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / span 3;
+  }
+}
+
+.gallery__image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  display: block;
+  height: 280px;
+}
+
+.gallery__content {
+  text-align: left;
+  display: grid;
+  row-gap: 10px;
+  padding-top: 15px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 75px;
+    grid-template-rows: 20px 20px;
+    background-color: @light-gray;
+    padding: 20px;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    background-color: fade(black, 30%);
+  }
+}
+
+.gallery__content--dark {
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    background-color: @individual-gray;
+  }
+}
+
+.gallery__title {
+  font-size: @font-base;
+  font-weight: bold;
+  margin: 0;
+}
+
+.gallery__author {
+  font-size: @font-base;
+  text-transform: none;
+}
+
+.gallery__meta {
+  font-size: @font-base;
+  text-transform: none;
+  margin: 0;
+}
+
+.gallery__likes {
+  @media (min-width: @tablet-width ) {
+    grid-row: 1 / span 2;
+    grid-column-start: 2;
+  }
+}
+
+.gallery__icon-likes {
+  position: relative;
+  top: 3px;
+  margin-right: 6px;
+  fill: fade(black, 30%);
+  cursor:pointer;
+  user-select: none;
+
+  &:hover {
+    fill: @text-color;
+  }
+
+  &:active {
+    fill: fade(@text-color, 30%);
+  }
+
+  @media (min-width: @desktop-width ) {
+    fill: white;
+    &:hover {
+        fill: fade(white, 60%);
+      }
+
+    &:active {
+      fill: fade(white, 30%);
+    }
+  }
+}
+
+.gallery__count-likes {
+  font-size: @font-base;
+  font-weight: bold;
+  user-select: none;
+}

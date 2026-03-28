@@ -1,0 +1,26 @@
+.copyright {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.copyright__text {
+  color: @text-color;
+  font-size: @font-base;
+  font-weight: normal;
+}
+
+.copyright__icon {
+  width: 40px;
+  height: 40px;
+  &:hover {
+    fill: @blue-hover;
+  }
+
+  &:active {
+    fill: @blue-down;
+  }
+}
