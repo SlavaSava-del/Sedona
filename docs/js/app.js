@@ -1,0 +1,1 @@
+let mainNav=document.querySelector(".site-list"),btnOpen=document.querySelector(".main-nav__toggle"),btnClose=document.querySelector(".site-list__close");btnOpen.addEventListener("click",function(){mainNav.classList.toggle("site-list--closed")}),btnClose.addEventListener("click",function(){mainNav.classList.toggle("site-list--closed")});

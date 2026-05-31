@@ -45,7 +45,7 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "12.18.2"
+    "node": "18.x"
   },
   "dependencies": {
     "imask": "^7.6.1"
